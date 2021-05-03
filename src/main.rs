@@ -1,4 +1,4 @@
-// Writing an OS in Rust(https://os.phil-opp.com/freestanding-rust-binary/)
+// Writing an OS in Rust(https://os.phil-opp.com/minimal-rust-kernel/)
 
 #![no_std] // 不链接 Rust 标准库
 #![no_main] // 禁用所有 Rust 层级的入口点
