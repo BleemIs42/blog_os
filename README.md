@@ -1,6 +1,6 @@
 # blog_os
 
-## Build bootable disk image
+## Test
 ```bash
-xargo bootimage
+cargo test
 ```
