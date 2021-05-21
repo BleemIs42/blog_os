@@ -14,14 +14,9 @@ pub extern "C" fn _start() -> ! {
 
     blog_os::init();
 
-    // fn stack_overflow() {
-    //     stack_overflow(); // for each recursion, the return address is pushed
-    // }
-    // // trigger a stack overflow
-    // stack_overflow();
-
-    // invoke a breakpoint exception
-    // x86_64::instructions::interrupts::int3();
+    use x86_64::registers::control::Cr3;
+    let (level_4_page_table, _) = Cr3::read();
+    println!("Level 4 page table at: {:?}", level_4_page_table.start_address());
 
     #[cfg(test)]
     test_main();
